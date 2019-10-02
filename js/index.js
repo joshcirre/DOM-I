@@ -114,7 +114,6 @@ newNavItem2.innerHTML = 'NavItem - Before';
 navbar.prepend(newNavItem2);
 
 // Stretch Goals
-
 button.addEventListener('click', function() {
   if (button.innerHTML === 'Clicked!') {
     button.innerHTML = 'Get Started';
