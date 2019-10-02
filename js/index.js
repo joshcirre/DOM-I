@@ -124,3 +124,5 @@ button.addEventListener('click', function() {
 
 button.style.border = '6px solid black';
 button.style.paddingBottom = '10px';
+newNavItem1.style.color = 'blue';
+newNavItem2.style.color = 'blue';
