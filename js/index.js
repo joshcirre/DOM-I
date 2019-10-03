@@ -46,14 +46,26 @@ const siteContent = {
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
-// Navbar
-let navItems = document.querySelectorAll('a');
-navItems[0].textContent = siteContent.nav['nav-item-1'];
-navItems[1].textContent = siteContent.nav['nav-item-2'];
-navItems[2].textContent = siteContent.nav['nav-item-3'];
-navItems[3].textContent = siteContent.nav['nav-item-4'];
-navItems[4].textContent = siteContent.nav['nav-item-5'];
-navItems[5].textContent = siteContent.nav['nav-item-6'];
+// // Navbar Old Way
+// let navItems = document.querySelectorAll('a');
+// navItems[0].textContent = siteContent.nav['nav-item-1'];
+// navItems[1].textContent = siteContent.nav['nav-item-2'];
+// navItems[2].textContent = siteContent.nav['nav-item-3'];
+// navItems[3].textContent = siteContent.nav['nav-item-4'];
+// navItems[4].textContent = siteContent.nav['nav-item-5'];
+// navItems[5].textContent = siteContent.nav['nav-item-6'];
+
+// Store values for forEach looping
+const navKeys = Object.keys(siteContent.nav);
+const navValues = Object.values(siteContent.nav);
+
+// Loops through Nav Elements
+let navAnchors = document.querySelectorAll('nav a');
+navAnchors.forEach((link, i) => {
+  link.style.color = 'green';
+  link.classList.add(navKeys[i]);
+  link.textContent = navValues[i];
+});
 
 // Header
 let h1 = document.querySelector('h1');
@@ -94,15 +106,15 @@ p[7].textContent = siteContent.contact.email;
 // Copyright
 p[8].textContent = siteContent.footer.copyright;
 
-// Style Changes
-navItems[0].style.color = 'green';
-navItems[1].style.color = 'green';
-navItems[2].style.color = 'green';
-navItems[3].style.color = 'green';
-navItems[4].style.color = 'green';
-navItems[5].style.color = 'green';
+// // Style Changes - Old
+// navItems[0].style.color = 'green';
+// navItems[1].style.color = 'green';
+// navItems[2].style.color = 'green';
+// navItems[3].style.color = 'green';
+// navItems[4].style.color = 'green';
+// navItems[5].style.color = 'green';
 
-// Add Nav
+// Add Nav Elements
 let navbar = document.querySelector('nav');
 
 let newNavItem1 = document.createElement('a');
